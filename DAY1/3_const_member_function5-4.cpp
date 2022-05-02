@@ -27,6 +27,10 @@ public:
 	}
 	~RefCount() {}
 };
+// github.com/aosp-mirror
+// platform system core 에서
+
+// libutils/include/utils/LightRefBase.h 찾아 보세요
 
 
 
