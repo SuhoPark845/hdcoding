@@ -29,9 +29,9 @@ int main()
 {
 	const Point pt(1, 2); // 이 경우에 아래 3줄을 생각해 보세요.
 
-	pt.x = 10;		// error. x는 public 이지만 "상수" 이므로	
-	pt.set(10, 20);	// error. 
-	pt.print();		// ??
+//	pt.x = 10;		// error. x는 public 이지만 "상수" 이므로	
+//	pt.set(10, 20);	// error. 
+	pt.print();		// print()가 상수 멤버 함수 라면 ok..!
 }
 
 
