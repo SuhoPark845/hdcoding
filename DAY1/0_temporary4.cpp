@@ -32,13 +32,18 @@ Point f1() // return by value : 리턴용 임시객체가 생성되어서 반환.
 {
 	return pt;
 }
+Point& f2() // return by reference : 리턴용 임시객체를 만들지 말고
+{			//						pt 자체를 반환해 달라는 의미.
+	return pt;
+}
 int main()
 {
 	std::cout << "------" << std::endl;
 
 //	f1().x = 10; // error. f1()은 임시객체를 반환 하는데
 				 // 임시객체(temporary)는 등호의 왼쪽에 올수 없다.
-	f1();
+//	f1();
+	f2().x = 10; // ok.. 결국 pt.x = 10 이 됩니다.
 
 	std::cout << "------" << std::endl;
 
