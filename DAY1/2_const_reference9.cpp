@@ -30,5 +30,5 @@ int main()
 	// 참고. string_view 개념
 	std::string      s2 = s; // s2가 s의 문자열을 복사해서 사용합니다.
 	std::string_view sv = s; // sv는 s의 문자열을 같이 사용합니다
-	sv[0] = 'A'; // error. sv 는 읽기만 됩니다
+//	sv[0] = 'A'; // error. sv 는 읽기만 됩니다
 }
