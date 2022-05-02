@@ -27,7 +27,7 @@ public:
 	}
 	~RefCount() {}
 };
-// github.com/aosp-mirror
+// github.com/aosp-mirror     "android open source project"
 // platform system core 에서
 
 // libutils/include/utils/LightRefBase.h 찾아 보세요
