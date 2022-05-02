@@ -26,7 +26,10 @@ int main()
 
 	People p;
 	p.setName(s1);
-	p.setName( std::move(s2) ); // ?? 
+	p.setName( std::move(s2) ); // 1. && 버전이 있다면 사용
+								// 2. 없다면 const & 에도 전달 가능
+								//    단, move 되지는 않는다.
+								// 즉, 에러는 아니지만 성능향상을 볼수는없다
 
 	std::cout << s1 << std::endl;
 	std::cout << s2 << std::endl;
