@@ -12,11 +12,18 @@ public:
 
 	void AddRef() const { ++ref; }
 
-	void Release() const // void Release( RefCount* this)
+//	void Release()		 // void Release( RefCount* this)
+	void Release() const // void Release( const RefCount* this)
 	{
+
 		if (--ref == 0)
 			//	delete this;
-			delete static_cast<T*>(this);
+//			delete static_cast<T*>(this); // const RefCount* => Truck* 인데
+									// static_cast 는 const 제거 못합니다.
+//			delete static_cast<T*>(const_cast<RefCount*>(this)); // ok
+
+			delete static_cast<const T*>(this); 
+					// const RefCount* => const Truck*
 	}
 	~RefCount() {}
 };
