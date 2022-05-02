@@ -7,6 +7,8 @@ public:
 
 	Point(int a, int b) { std::cout << "Point()" << std::endl; }
 	~Point() { std::cout << "~Point()" << std::endl; }
+
+	Point(const Point& p) { std::cout << "copy ctor" << std::endl; }
 };
 //-------------------------------------------
 
@@ -34,8 +36,9 @@ int main()
 {
 	std::cout << "------" << std::endl;
 
-	f1().x = 10; // error. f1()은 임시객체를 반환 하는데
+//	f1().x = 10; // error. f1()은 임시객체를 반환 하는데
 				 // 임시객체(temporary)는 등호의 왼쪽에 올수 없다.
+	f1();
 
 	std::cout << "------" << std::endl;
 
