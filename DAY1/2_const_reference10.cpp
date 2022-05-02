@@ -13,7 +13,7 @@ void* operator new(std::size_t sz)
 void print_msg(const std::string& msg)
 //void print_msg(std::string_view msg) 
 {
-	std::cout << msg << std::endl;
+//	std::cout << msg << std::endl;
 }
 
 int main()
