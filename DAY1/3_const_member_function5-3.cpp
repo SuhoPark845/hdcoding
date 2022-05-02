@@ -4,11 +4,8 @@
 // 참조계수를 책임지는 기반 클래스 설계
 
 // CRTP : Curiously Recurring Template Pattern
-
 // 기반 클래스에서 미래에 만들어진 파생 클래스 이름을 사용할수 있게 하는 기술
-
 // 파생 클래스가 기반클래스에게 자신의 이름을 템플릿 인자로 전달하는 기술
-
 template<typename T> 
 class RefCount
 {
@@ -24,7 +21,6 @@ public:
 	}
 	~RefCount() {}
 };
-
 class Truck : public RefCount< Truck  >
 {
 public:
