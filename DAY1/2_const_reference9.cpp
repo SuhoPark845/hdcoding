@@ -19,12 +19,14 @@ void print_msg(std::string_view msg) // 참조가 아닌 value 입니다.
 {
 	std::cout << msg << std::endl;
 }
-
-
 int main()
 {
 	std::string s = "sldjfsdlkfsdfsdkfjlsd";
 	print_msg(s);
+
+	print_msg("인자를 이렇게 보낼때를 생각해 보세요");
+
+
 
 
 	// 참고. string_view 개념
