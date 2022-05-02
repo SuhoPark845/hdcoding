@@ -51,3 +51,14 @@ int main()
 
 
 
+Point& f3() 
+{			
+	Point p(1, 2);
+	return p;   // 컴파일 에러는 아니지만, 절대 이렇게 하면 안됩니다.
+				// F43(21page) : 절대 지역변수를 참조나 포인터로 반환
+				//			하지말라.
+}
+// 핵심 1. value return 과 reference return 의 차이점 알아 두세요
+//     2. reference return 은 객체가 파괴 되지 않은 경우(전역변수등)에
+//        만 사용해야 합니다.
+//		  지역변수는 반드시 value return 으로만 사용해야 합니다.
