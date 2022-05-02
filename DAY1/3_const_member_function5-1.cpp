@@ -8,7 +8,7 @@ class Car
 public:
 	~Car() { std::cout << "~Car" << std::endl; }
 
-	void AddRef() { ++ref; }
+	void AddRef()  { ++ref; }
 	void Release() { if (--ref == 0) delete this; }
 };
 
@@ -16,7 +16,7 @@ int main()
 {
 	Car* p1 = new Car;
 	p1->AddRef();
-	Car* p2 = p2; // 포인터 복사 시 참조 계수 증가
+	Car* p2 = p1; // 포인터 복사 시 참조 계수 증가
 	p2->AddRef();
 
 	// 포인터 사용후에는 직접 지우지 말고 참조 계수 감소
