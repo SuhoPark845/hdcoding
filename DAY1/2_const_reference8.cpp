@@ -24,9 +24,11 @@ int main()
 {
 	std::string s1 = "john";
 	std::string s2 = "john";
+	const std::string s3 = "john";
 
 	People p;
 	p.setName(s1);
+	p.setName(s3);
 	p.setName(std::move(s2)); 
 
 	std::cout << s1 << std::endl;
